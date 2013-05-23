@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="http://static.paipaiimg.com/js/jquery-1.8.3.min.js?t=20130307" type="text/javascript" language="javascript"></script>
+<style>
+body,ul,li{margin:0;padding:0;}
+ul,li{list-style:none;}
+a img{border:0;}
+.slider_wrap{width:720px;height:360px;overflow:hidden;margin:10px auto;position:relative;}
+.slider_wrap li{float:left;}
+.slider_wrap .slider_large{width:720px;overflow:hidden;}
+.slider_wrap .slider_thumb{position:absolute;bottom:0;left:0;width:100%;}
+.slider_wrap .slider_thumb li{height:12px;width:120px;text-indent:-9999px;}
+.slider_wrap .slider_thumb .s_bar{width:100%;height:100%;background-color:#898989;display:block;transition:background .2s ease;-webkit-transition:background .2s ease;}
+.slider_wrap .slider_thumb img{position:absolute;bottom:50px;opacity:0;transition:all .4s ease;-webkit-transition:all .4s ease;}
+.slider_wrap .slider_thumb .on img{bottom:14px;opacity:1;}
+.slider_wrap .slider_thumb .s_bar:hover{background-color:#000;height:15px;margin-top:-2px;opacity:0.5;filter:alpha(opacity=50);}
+.slider_wrap .slider_thumb .cur{background-color:#FF6D9B;height:15px;top:-2px;position:absolute;left:0;top:-2px;box-shadow: 0 4px 8px #333333;transition:left .4s ease;-webkit-transition:left .4s ease;}
+</style>
+</head>
+
+<body>
+<div class="slider_wrap">
+	<ul class="slider_large">
+    	<li><a href="#" target="_blank"><img src="http://img3.paipaiimg.com/edac2745/acpc-51341213-00000001000000000AA600000000635A.1.jpg" /></a></li>
+        <li><a href="#" target="_blank"><img src="http://img2.paipaiimg.com/35d39f90/acpc-513019A2-00000001000000000AB30000000061B0.1.jpg" /></a></li>
+        <li><a href="#" target="_blank"><img src="http://img2.paipaiimg.com/480761c3/acpc-513F1B62-00000001000000000AB2000000007212.1.jpg" /></a></li>
+        <li><a href="#" target="_blank"><img src="http://img0.paipaiimg.com/cba54453/acpc-512C63E8-00000001000000000AAE000000005FBD.1.jpg" /></a></li>
+        <li><a href="#" target="_blank"><img src="http://img4.paipaiimg.com/f04558c2/acpc-512EC974-00000001000000000AB10000000060B5.1.jpg" /></a></li>
+        <li><a href="#" target="_blank"><img src="http://img6.paipaiimg.com/b48d6f87/acpc-512C2C26-00000001000000000AA3000000005FB3.1.jpg" /></a></li>
+    </ul>
+    <ul class="slider_thumb">
+    	<li class="cur">current</li>
+    	<li>
+        	<a href="#" class="s_bar">1</a>
+            <img src="http://img3.paipaiimg.com/edac2745/acpc-51341213-00000001000000000AA600000000635A.1.jpg" alt="" width="120" />
+        </li>
+        <li>
+        	<a href="#" class="s_bar">2</a>
+            <img src="http://img2.paipaiimg.com/35d39f90/acpc-513019A2-00000001000000000AB30000000061B0.1.jpg" alt="" width="120" />
+        </li>
+        <li>
+        	<a href="#" class="s_bar">3</a>
+            <img src="http://img2.paipaiimg.com/480761c3/acpc-513F1B62-00000001000000000AB2000000007212.1.jpg" alt="" width="120" />
+        </li>
+        <li>
+        	<a href="#" class="s_bar">4</a>
+            <img src="http://img0.paipaiimg.com/cba54453/acpc-512C63E8-00000001000000000AAE000000005FBD.1.jpg" alt="" width="120" />
+        </li>
+        <li>
+        	<a href="#" class="s_bar">5</a>
+            <img src="http://img4.paipaiimg.com/f04558c2/acpc-512EC974-00000001000000000AB10000000060B5.1.jpg" alt="" width="120" />
+        </li>
+        <li>
+        	<a href="#" class="s_bar">5</a>
+            <img src="http://img6.paipaiimg.com/b48d6f87/acpc-512C2C26-00000001000000000AA3000000005FB3.1.jpg" alt="" width="120" />
+        </li>
+    </ul>
+</div>
+<script>
+$(function(){
+	$('.slider_thumb li').hover(function(){
+		$(this).addClass('on');
+	},
+	function(){
+		$(this).removeClass('on');
+	});
+	$('.slider_thumb li').click(function(){
+		$('.slider_thumb .cur').css('left',$(this).position().left);
+	});
+});
+</script>
+</body>
+</html>
