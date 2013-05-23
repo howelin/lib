@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="http://static.paipaiimg.com/qqbuy/js/lib/jquery-1.8.3.min.js"></script>
+<link href="animate.css" rel="stylesheet" />
+<style>
+img {border:0;vertical-align: bottom;}
+.box {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 480px;
+	padding: 30px 0;
+	overflow: hidden;
+}
+.image {
+	display: inline-block;
+	width: 512px;
+	height: 381px;
+}
+.recycle {
+	margin-left: 240px;
+	position: absolute;
+}
+.button {
+	width: 100px;
+	height: 32px;
+	font-size: 14px;
+}
+.confirm {
+	width: 452px;
+	margin-left: -100px;
+	position: absolute;
+	left: 50%;
+	top: -1000px;
+	z-index: 1;
+}
+
+.animated {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+@-webkit-keyframes tada {
+    0% {-webkit-transform: scale(1);}    
+    10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+    100% {-webkit-transform: scale(1) rotate(0);}
+}
+
+@-moz-keyframes tada {
+    0% {-moz-transform: scale(1);}    
+    10%, 20% {-moz-transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {-moz-transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {-moz-transform: scale(1.1) rotate(-3deg);}
+    100% {-moz-transform: scale(1) rotate(0);}
+}
+.tada {
+    -webkit-animation-name: tada;
+    -moz-animation-name: tada;
+}
+</style>
+<style>
+/* layer */
+.layer_common_v2 {position:absolute;color:#2B2B2B;background-color:rgba(102,102,102,0.2);filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#33666666', EndColorStr='#33666666');#filter:none;#background-color:#e0e0e0;width:452px;}
+.layer_common_v2 .layer_inner {position:relative;top:-3px;left:-3px;border:1px solid #acacac;background-color:#fff;}
+.layer_common_v2 .layer_hd {height:30px;font:700 14px/30px Arial,Simsun;background:#E7DFDF;zoom:1;overflow:hidden;}
+.layer_common_v2 .layer_hd_title {float:left;font-size:14px;padding-left:10px;}
+.layer_common_v2 .layer_hd_close {float:right;margin:8px 12px 0 0;width:14px;height:14px;line-height:100px;overflow:hidden;background-position:-98px -68px;background-color:#fff;border-radius:2px;}
+.layer_common_v2 .layer_hd_close:hover {background-position:-78px -68px;}
+
+.layer_common_v2 .layer_bd {padding:20px;word-break:break-all;white-space:normal;word-wrap:break-word;height:auto;zoom:1;overflow:hidden;}
+.layer_common_v2 .layer_status {float:left;margin-left:-50px;height:32px;width:32px;}
+.layer_common_v2 .layer_cont {float:left;}
+.layer_common_v2 .layer_cont_hd {font:700 14px/30px Arial;}
+.layer_common_v2 .layer_cont_ft {margin-top:10px;}
+.layer_common_v2 .mod_btn{margin-right:10px;}
+.confirm_bar a{text-decoration:none;color:#000;}
+.box_balance button{background-color:#ebe3e2;border:1px solid #cac2c1;border-radius:3px;height:22px;}
+</style>
+</head>
+
+<body>
+<span class="image"><img id="image" class="flow" src="default.jpg" /></span>
+<img id="recycle" class="recycle animated" src="huishou.png" />
+<p><input type="button" id="button" class="button" value="放入垃圾箱" /></p>
+<div id="layer" style="position:absolute;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.3;"></div>
+<!-- 确定移除的提示框 -->
+<div id="confirm" class="confirm pop reverse out" style="z-index:1;">
+    <div class="confirm_bar" style="position:absolute;right:15px;top:5px;z-index:2;">
+    	<a href="javascript:" id="close" class="confirm_close">×</a>
+    </div>
+    <!--<div class="confirm_body">
+    	<p>您确定将该图片移入回收站？</p>
+        <p>
+            <button id="ensure" type="button">确定</button>
+            <button id="cancel" type="button">取消</button>
+        </p>
+    </div>-->
+    <div class="layer_common_v2 layer_tms_tips confirm_body">
+        <div class="layer_inner">
+            <div class="layer_hd">
+                <div class="layer_hd_title">资源账户充值</div>
+                <a class="layer_hd_close" href="javascript:void(0);">close</a>
+            </div>
+            <div class="layer_bd">
+                <div class="box_balance">
+                    <p>把刘亦菲丢进垃圾桶？</p>
+                    <button id="ensure" type="button"><span class="inner">确定</span></button>
+            		<button id="cancel" type="button"><span class="inner">取消</span></button>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+<script>
+// 浮动提示框的元素们
+var eleConfirm = $("#confirm"), eleClose = $("#close");
+// 图片和回收站元素
+var eleImage = $("#image"), eleRecycle = $("#recycle");
+$('#layer').hide();
+// 弹框关闭的方法
+var funConfirmOut = function() { eleConfirm.addClass("reverse out").removeClass("in"); $('#layer').hide();}
+function recycleOpen(){eleRecycle.attr('src','huishou_open.png');setTimeout(function() { eleRecycle.attr('src','huishou.png') }, 150);};
+// 点击弹框右上角的关闭和取消按钮
+$("#close, #cancel").bind("click", funConfirmOut);
+// 点击确定按钮按钮
+$("#ensure").bind("click", function() {
+    eleImage.addClass("out reverse").removeClass("in");
+    setTimeout(function() {
+        eleImage.css("visibility", "hidden");
+        eleRecycle.addClass("tada"); 
+        setTimeout(function() { eleRecycle.removeClass("tada"); }, 1000);
+		recycleOpen();
+    }, 300);
+    funConfirmOut();
+});
+// 点击垃圾箱
+eleRecycle.bind("click", function() {
+	if(eleImage.css('visibility')!='visible'){
+	recycleOpen();
+	};
+    eleImage.css("visibility", "visible").removeClass("out reverse").addClass("in"); 	
+});
+
+// 点击移除图片按钮，出现提示框
+$("#button").bind("click", function() {
+    var scrollTop = $(document.body).scrollTop();
+    if (!eleImage.hasClass("out")) {
+		$('#layer').show();
+		setTimeout(function(){
+        eleConfirm.css({
+            top: scrollTop + ($(window).height() - eleConfirm.height()) / 2
+        }).removeClass("reverse out").addClass("in");},200);
+    } else {
+        eleRecycle.addClass("tada");
+        setTimeout(function() { eleRecycle.removeClass("tada"); }, 1000);    
+    }
+	
+});
+</script>
+</body>
+</html>
