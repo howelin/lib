@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>QQ网购-元宵氛围动画</title>
+</head>
+
+<body>
+<style>
+body{background:url(img/bg_ie.jpg) no-repeat center top;}
+</style>
+<![if !IE]>
+<style>
+body{margin:0;padding:0;}
+body{background:url(img/bg.jpg) no-repeat center top;}
+.lantern_wrap{width:985px;margin:0 auto;height:435px;position:relative;}
+.lantern_wrap i{position:absolute;background-image:url(img/icon.png);}
+.lantern_wrap .lion_bd{background-position:0 0;left:148px;top:72px;width:127px;height:47px;}
+.lantern_wrap .lion_hd{background-position:-130px 0;left:192px;top:45px;width:55px;height:51px;transform-origin:center center;-moz-transform-origin:center center;-webkit-transform-origin:center center;animation:lionAn 5s ease 2s infinite;-moz-animation:lionAn 5s ease 2s infinite;-webkit-animation:lionAn 5s ease 2s infinite;}
+.lantern_wrap .ball{background-position:0 -50px;width:55px;height:24px;left:246px;top:38px;animation:ballAn 1s linear 1s forwards;-moz-animation:ballAn 1s linear 1s forwards;-webkit-animation:ballAn 1s linear 1s forwards;opacity:0;}
+.lantern_wrap .sky_lantern{opacity:0;}
+.lantern_wrap .sky_lantern_1{background-position:-272px 0;left:-47px;top:63px;width:26px;height:28px;animation:skyAn1 6s linear 4s infinite;-moz-animation:skyAn1 6s linear 4s infinite;-webkit-animation:skyAn1 6s linear 4s infinite;}
+.lantern_wrap .sky_lantern_2{background-position:-272px 0;width:26px;height:28px;left:-122px;top:59px;animation:skyAn2 6s linear 3s infinite;-moz-animation:skyAn2 6s linear 3s infinite;-webkit-animation:skyAn2 6s linear 3s infinite;}
+.lantern_wrap .sky_lantern_3{background-position:-253px 0;left:-82px;top:55px;width:17px;height:17px;animation:skyAn3 6s linear 1s infinite;-moz-animation:skyAn3 6s linear 1s infinite;-webkit-animation:skyAn3 6s linear 1s infinite;}
+.lantern_wrap .lantern{width:68px;height:147px;}
+.lantern_wrap .sky_lantern_4{background-position:-235px 0;left:-130px;top:40px;width:12px;height:15px;animation:skyAn4 6s linear 0.5s infinite;-moz-animation:skyAn4 6s linear 0.5s infinite;-webkit-animation:skyAn4 6s linear 0.5s infinite;}
+.lantern_wrap .sky_lantern_5,.lantern_wrap .sky_lantern_8{background-position:-215px 0;width:10px;height:12px;left:-20px;top:55px;animation:skyAn5 6s linear 1s infinite;-moz-animation:skyAn5 6s linear 1s infinite;-webkit-animation:skyAn5 6s linear 1s infinite;}
+.lantern_wrap .sky_lantern_6,.lantern_wrap .sky_lantern_7{background-position:-332px 0;left:187px;top:25px;width:22px;height:23px;animation:skyAn6 1s linear 2s forwards;-moz-animation:skyAn6 1s linear 2s forwards;-webkit-animation:skyAn6 1s linear 2s forwards;}
+.lantern_wrap .lantern{width:68px;height:147px;}
+.lantern_wrap .sky_lantern_7{background-position:-354px 0;left:auto;right:192px;top:45px;width:17px;height:20px;animation-delay:3s;-moz-animation-delay:3s;-webkit-animation-delay:3s;}
+.lantern_wrap .sky_lantern_8{background-position:-215px -40px;left:auto;right:-20px;}
+.lantern_wrap .sky_lantern_9{background-position:-293px -40px;width:27px;height:32px;left:auto;right:-46px;top:53px;animation:skyAn9 6s linear 3s infinite;-moz-animation:skyAn9 6s linear 3s infinite;-webkit-animation:skyAn9 6s linear 3s infinite;}
+.lantern_wrap .sky_lantern_10{background-position:-254px -40px;width:15px;height:18px;left:auto;right:-80px;top:53px;animation:skyAn10 6s linear 4s infinite;-moz-animation:skyAn10 6s linear 4s infinite;-webkit-animation:skyAn10 6s linear 4s infinite;}
+.lantern_wrap .sky_lantern_11{background-position:-273px -40px;width:21px;height:24px;left:auto;right:-105px;top:70px;animation:skyAn11 6s linear 0.5s infinite;-moz-animation:skyAn11 6s linear 0.5s infinite;-webkit-animation:skyAn11 6s linear 0.5s infinite;}
+.lantern_wrap .sky_lantern_12{background-position:-235px -40px;width:12px;height:15px;left:auto;right:-132px;top:66px;animation:skyAn12 6s linear 2s infinite;-moz-animation:skyAn12 6s linear 2s infinite;-webkit-animation:skyAn12 6s linear 2s infinite;}
+.lantern_wrap .sky_lantern_s{background-position:0 -80px;left:-173px;top:33px;width:393px;height:40px;animation:skysAn 3s linear 2.5s forwards;-moz-animation:skysAn 3s linear 2.5s forwards;-webkit-animation:skysAn 3s linear 2.5s forwards;}
+.lantern_wrap .sky_lantern_s_r{background-position:0 -140px;left:auto;right:-175px;top:41px;width:407px;height:33px;animation:skysAn 3s linear 2.5s forwards;-moz-animation:skysAn 3s linear 2.5s forwards;-webkit-animation:skysAn 3s linear 2.5s forwards;}
+.lantern_wrap .light{background-position:0 -180px;left:-215px;top:20px;width:485px;height:80px;animation:lightAn 5.5s linear 3s infinite;-moz-animation:lightAn 5.5s linear 3s infinite;-webkit-animation:lightAn 5.5s linear 3s infinite;opacity:0;}
+.lantern_wrap .light_r{background-position:0 -270px;right:-215px;top:36px;width:221px;height:73px;animation:lightAn 5.5s linear 3s infinite;-moz-animation:lightAn 5.5s linear 3s infinite;-webkit-animation:lightAn 5.5s linear 3s infinite;opacity:0;}
+.lantern_wrap .lantern:hover{transform-origin:center 0;-moz-transform-origin:center 0;-webkit-transform-origin:center 0;animation:lanternAn 1s linear forwards;-moz-animation:lanternAn 1s linear forwards;-webkit-animation:lanternAn 1s linear forwards;}
+.lantern_wrap .lantern_1,.lantern_wrap .lantern_4{background-position:-320px -270px;left:-189px;top:260px;}
+.lantern_wrap .lantern_2,.lantern_wrap .lantern_3{background-position:-405px -270px;left:-89px;top:313px;}
+.lantern_wrap .lantern_3{right:-87px;left:auto;}
+.lantern_wrap .lantern_4{right:-187px;left:auto;}
+
+/* 关键帧 */
+@keyframes lionAn{
+	0%{transform:translate(0,0) rotate(0deg);}
+	5%{transform:translate(0,-7px) rotate(0deg);}
+	10%{transform:translate(0,-4px) rotate(0deg);}
+	12%{transform:translate(0,-4px) rotate(10deg);}
+	14%{transform:translate(0,-4px) rotate(0deg);}
+	16%{transform:translate(0,-4px) rotate(-10deg);}
+	18%{transform:translate(0,-4px) rotate(0deg);}
+	20%{transform:translate(0,-4px) rotate(10deg);}
+	22%{transform:translate(0,-4px) rotate(0deg);}
+	24%{transform:translate(0,-4px) rotate(-10deg);}
+	26%{transform:translate(0,-4px) rotate(0deg);}
+	35%{transform:translate(0,-4px) rotate(0deg);}
+	42%{transform:translate(0,0) rotate(0);}
+}
+@-moz-keyframes lionAn{
+	0%{-moz-transform:translate(0,0) rotate(0deg);}
+	5%{-moz-transform:translate(0,-7px) rotate(0deg);}
+	10%{-moz-transform:translate(0,-4px) rotate(0deg);}
+	12%{-moz-transform:translate(0,-4px) rotate(10deg);}
+	14%{-moz-transform:translate(0,-4px) rotate(0deg);}
+	16%{-moz-transform:translate(0,-4px) rotate(-10deg);}
+	18%{-moz-transform:translate(0,-4px) rotate(0deg);}
+	20%{-moz-transform:translate(0,-4px) rotate(10deg);}
+	22%{-moz-transform:translate(0,-4px) rotate(0deg);}
+	24%{-moz-transform:translate(0,-4px) rotate(-10deg);}
+	26%{-moz-transform:translate(0,-4px) rotate(0deg);}
+	35%{-moz-transform:translate(0,-4px) rotate(0deg);}
+	42%{-moz-transform:translate(0,0) rotate(0);}
+	/*1%{-moz-transform:rotate(30deg);}
+	10%{-moz-transform:rotate(30deg);}
+	11%{-moz-transform:rotate(0);}
+	30%{-moz-transform:rotate(0);}
+	31%{-moz-transform:rotate(-30deg);}
+	50%{-moz-transform:rotate(-30deg);}
+	60%{-moz-transform:rotate(0deg);}*/
+}
+@-webkit-keyframes lionAn{
+	0%{-webkit-transform:translate(0,0) rotate(0deg);}
+	5%{-webkit-transform:translate(0,-7px) rotate(0deg);}
+	10%{-webkit-transform:translate(0,-4px) rotate(0deg);}
+	12%{-webkit-transform:translate(0,-4px) rotate(10deg);}
+	14%{-webkit-transform:translate(0,-4px) rotate(0deg);}
+	16%{-webkit-transform:translate(0,-4px) rotate(-10deg);}
+	18%{-webkit-transform:translate(0,-4px) rotate(0deg);}
+	20%{-webkit-transform:translate(0,-4px) rotate(10deg);}
+	22%{-webkit-transform:translate(0,-4px) rotate(0deg);}
+	24%{-webkit-transform:translate(0,-4px) rotate(-10deg);}
+	26%{-webkit-transform:translate(0,-4px) rotate(0deg);}
+	35%{-webkit-transform:translate(0,-4px) rotate(0deg);}
+	42%{-webkit-transform:translate(0,0) rotate(0);}
+}
+@keyframes ballAn {
+	0% {opacity:0;}	
+	100% {opacity:1;}
+}
+@-moz-keyframes ballAn {
+	0% {opacity:0;}	
+	100% {opacity:1;}
+}
+@-webkit-keyframes ballAn {
+	0% {opacity:0;}	
+	100% {opacity:1;}
+}
+@keyframes stAn {
+	0% {transform: translateY(0);}	
+	50% {transform: translateY(-30px);}	
+	80% {opacity:0;transform: translateY(-40px);}
+}
+@-moz-keyframes stAn {
+	0% {-moz-transform: translateY(0);}	
+	50% {-moz-transform: translateY(-30px);}	
+	80% {opacity:0;-moz-transform: translateY(-40px);}
+}
+@-webkit-keyframes stAn {
+	0% {-webkit-transform: translateY(0);}	
+	50% {-webkit-transform: translateY(-30px);}	
+	80% {opacity:0;-webkit-transform: translateY(-40px);}
+}
+@keyframes skyAn1 {
+	0% {transform: translateY(63px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-30px);}
+	70% {opacity: 0;transform: translateY(-40px);}
+}
+@-moz-keyframes skyAn1 {
+	0% {-moz-transform: translateY(63px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-30px);}
+	70% {opacity: 0;-moz-transform: translateY(-40px);}
+}
+@-webkit-keyframes skyAn1 {
+	0% {-webkit-transform: translateY(63px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-30px);}
+	70% {opacity: 0;-webkit-transform: translateY(-40px);}
+}
+@keyframes skyAn2 {
+	0% {transform: translateY(67px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-23px);}
+	70% {opacity: 0;transform: translateY(-33px);}
+}
+@-moz-keyframes skyAn2 {
+	0% {-moz-transform: translateY(67px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-23px);}
+	70% {opacity: 0;-moz-transform: translateY(-33px);}
+}
+@-webkit-keyframes skyAn2 {
+	0% {-webkit-transform: translateY(67px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-23px);}
+	70% {opacity: 0;-webkit-transform: translateY(-33px);}
+}
+@keyframes skyAn3 {
+	0% {transform: translateY(82px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-20px);}
+	70% {opacity: 0;transform: translateY(-30px);}
+}
+@-moz-keyframes skyAn3 {
+	0% {-moz-transform: translateY(82px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-20px);}
+	70% {opacity: 0;-moz-transform: translateY(-30px);}
+}
+@-webkit-keyframes skyAn3 {
+	0% {-webkit-transform: translateY(82px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-20px);}
+	70% {opacity: 0;-webkit-transform: translateY(-30px);}
+}
+@keyframes skyAn4 {
+	0% {transform: translateY(98px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-10px);}
+	70% {opacity: 0;transform: translateY(-15px);}
+}
+@-moz-keyframes skyAn4 {
+	0% {-moz-transform: translateY(98px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-10px);}
+	70% {opacity: 0;-moz-transform: translateY(-15px);}
+}
+@-webkit-keyframes skyAn4 {
+	0% {-webkit-transform: translateY(98px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-10px);}
+	70% {opacity: 0;-webkit-transform: translateY(-15px);}
+}
+@keyframes skyAn5 {
+	0% {transform: translateY(70px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-20px);}
+	70% {opacity: 0;transform: translateY(-30px);}
+}
+@-moz-keyframes skyAn5 {
+	0% {-moz-transform: translateY(70px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-20px);}
+	70% {opacity: 0;-moz-transform: translateY(-30px);}
+}
+@-webkit-keyframes skyAn5 {
+	0% {-webkit-transform: translateY(70px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-20px);}
+	70% {opacity: 0;-webkit-transform: translateY(-30px);}
+}
+@keyframes skyAn6 {
+	0% {opacity:0;}	
+	100% {opacity:1;}
+}
+@-moz-keyframes skyAn6 {
+	0% {opacity:0;}	
+	100% {opacity:1;}
+}
+@-webkit-keyframes skyAn6 {
+	0% {opacity:0;}	
+	100% {opacity:1;}
+}
+@keyframes skyAn9 {
+	0% {transform: translateY(70px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-20px);}
+	70% {opacity: 0;transform: translateY(-30px);}
+}
+@-moz-keyframes skyAn9 {
+	0% {-moz-transform: translateY(70px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-20px);}
+	70% {opacity: 0;-moz-transform: translateY(-30px);}
+}
+@-webkit-keyframes skyAn9 {
+	0% {-webkit-transform: translateY(70px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-20px);}
+	70% {opacity: 0;-webkit-transform: translateY(-30px);}
+}
+@keyframes skyAn10 {
+	0% {transform: translateY(83px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-20px);}
+	70% {opacity: 0;transform: translateY(-30px);}
+}
+@-moz-keyframes skyAn10 {
+	0% {-moz-transform: translateY(83px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-20px);}
+	70% {opacity: 0;-moz-transform: translateY(-30px);}
+}
+@-webkit-keyframes skyAn10 {
+	0% {-webkit-transform: translateY(83px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-20px);}
+	70% {opacity: 0;-webkit-transform: translateY(-30px);}
+}
+@keyframes skyAn11 {
+	0% {transform: translateY(60px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-35px);}
+	70% {opacity: 0;transform: translateY(-45px);}
+}
+@-moz-keyframes skyAn11 {
+	0% {-moz-transform: translateY(60px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-35px);}
+	70% {opacity: 0;-moz-transform: translateY(-45px);}
+}
+@-webkit-keyframes skyAn11 {
+	0% {-webkit-transform: translateY(60px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-35px);}
+	70% {opacity: 0;-webkit-transform: translateY(-45px);}
+}
+@keyframes skyAn12 {
+	0% {transform: translateY(72px);}	
+	30% {opacity: 1;transform: translateY(0px);}
+	60% {opacity: 1;transform: translateY(-30px);}
+	70% {opacity: 0;transform: translateY(-40px);}
+}
+@-moz-keyframes skyAn12 {
+	0% {-moz-transform: translateY(72px);}	
+	30% {opacity: 1;-moz-transform: translateY(0px);}
+	60% {opacity: 1;-moz-transform: translateY(-30px);}
+	70% {opacity: 0;-moz-transform: translateY(-40px);}
+}
+@-webkit-keyframes skyAn12 {
+	0% {-webkit-transform: translateY(72px);}	
+	30% {opacity: 1;-webkit-transform: translateY(0px);}
+	60% {opacity: 1;-webkit-transform: translateY(-30px);}
+	70% {opacity: 0;-webkit-transform: translateY(-40px);}
+}
+@keyframes skysAn {
+	0% {opacity:0;}	
+	100% {opacity: 1;}
+}
+@-moz-keyframes skysAn {
+	0% {opacity:0;}	
+	100% {opacity: 1;}
+}
+@-webkit-keyframes skysAn {
+	0% {opacity:0;}	
+	100% {opacity: 1;}
+}
+@keyframes lightAn {
+	0% {opacity:0;}	
+	70% {opacity: 1;}
+}
+@-moz-keyframes lightAn {
+	0% {opacity:0;}	
+	70% {opacity: 1;}
+}
+@-webkit-keyframes lightAn {
+	0% {opacity:0;}	
+	70% {opacity: 1;}
+}
+@keyframes lanternAn{
+	20%{transform:rotate(3deg);}
+	40%{transform:rotate(-3deg);}
+	60%{transform:rotate(2deg);}
+	80%{transform:rotate(-2deg);}
+	100%{transform:rotate(0deg);}
+}
+@-moz-keyframes lanternAn{
+	20%{-moz-transform:rotate(3deg);}
+	40%{-moz-transform:rotate(-3deg);}
+	60%{-moz-transform:rotate(2deg);}
+	80%{-moz-transform:rotate(-2deg);}
+	100%{-moz-transform:rotate(0deg);}
+}
+@-webkit-keyframes lanternAn{
+	20%{-webkit-transform:rotate(3deg);}
+	40%{-webkit-transform:rotate(-3deg);}
+	60%{-webkit-transform:rotate(2deg);}
+	80%{-webkit-transform:rotate(-2deg);}
+	100%{-webkit-transform:rotate(0deg);}
+}
+</style>
+<div class="lantern_wrap">
+    <i class="lion_bd"></i>
+    <i class="lion_hd"></i>
+    <i class="ball"></i>
+    <i class="light"></i>
+    <i class="light_r"></i>
+    <i class="sky_lantern sky_lantern_s"></i>
+    <i class="sky_lantern sky_lantern_s_r"></i>
+    <i class="sky_lantern sky_lantern_1"></i>
+    <i class="sky_lantern sky_lantern_2"></i>
+    <i class="sky_lantern sky_lantern_3"></i>
+    <i class="sky_lantern sky_lantern_4"></i>
+    <i class="sky_lantern sky_lantern_5"></i>
+    <i class="sky_lantern sky_lantern_6"></i>
+  	<i class="sky_lantern sky_lantern_7"></i>
+    <i class="sky_lantern sky_lantern_8"></i>
+    <i class="sky_lantern sky_lantern_9"></i>
+    <i class="sky_lantern sky_lantern_10"></i>
+    <i class="sky_lantern sky_lantern_11"></i>
+    <i class="sky_lantern sky_lantern_12"></i>
+    <i class="lantern lantern_1"></i>
+    <i class="lantern lantern_2"></i>
+    <i class="lantern lantern_3"></i>
+    <i class="lantern lantern_4"></i>
+</div>
+<![endif]>
+</body>
+</html>
