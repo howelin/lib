@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品列表</title>
+<style>
+ul,li{list-style:none;padding:0;margin:0;}
+a img{border:none;}
+.grid_layout{padding:10px;margin:0 auto;width:862px;height:372px;background:#666;}
+.grid{position:relative;background:#fff;height:372px;}
+.grid li{position:absolute;overflow:hidden;width:120px;height:120px;float:left;}
+.grid li a{text-decoration:none;display:block;width:120px;height:120px;}
+.grid .item_1{left:0;height:372px;width:342px;}
+.grid .item_2,.grid .item_6,.grid .item_10{left:352px;}
+.grid .item_3,.grid .item_7,.grid .item_11{left:482px;}
+.grid .item_4,.grid .item_8,.grid .item_12{left:612px;}
+.grid .item_5,.grid .item_9,.grid .item_13{left:742px;}
+.grid .item_1,.grid .item_2,.grid .item_3,.grid .item_4,.grid .item_5{top:0;}
+.grid .item_6,.grid .item_7,.grid .item_8,.grid .item_9{top:126px;}
+.grid .item_10,.grid .item_11,.grid .item_12,.grid .item_13{top:252px;}
+
+.grid .item img {
+	float: left;
+	width: 100%;
+	height: auto;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+	-moz-transform: translate3d(0, 0, 0);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+}
+.grid .info {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #DC584C;
+	display: none;
+	z-index: 2;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+	-moz-transform: translate3d(0, 0, 0);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+}
+.grid p {
+	font-size: 22px;
+	font-weight: bolder;
+	color: #FFF;
+	text-align:center;
+	font:bold 16px "微软雅黑";
+}
+</style>
+</head>
+
+<body>
+<div class="grid_layout">
+<ul class="grid">
+    <li class="item_1"><a target="_blank" href="#"><img alt="" src="http://pics2.paipaiimg.com/update/20130312/index_pic_447x371.jpg"></a></li>
+    <li class="item item_2"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>1</p>
+			</div></a></li>
+    <li class="item item_3"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>2</p></div></a></li>
+    <li class="item item_4"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>3</p></div></a></li>
+    <li class="item item_5"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>4</p></div></a></li>
+    <li class="item item_6"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>5</p></div></a></li>
+    <li class="item item_7"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>6</p></div></a></li>
+    <li class="item item_8"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>7</p></div></a></li>
+    <li class="item item_9"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>8</p></div></a></li>
+    <li class="item item_10"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>9</p></div></a></li>
+    <li class="item item_11"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>10</p></div></a></li>
+    <li class="item item_12"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>11</p></div></a></li>
+    <li class="item item_13"><a target="_blank" href="#"><img alt="" src="images.jpg"><div class="info">
+				<p>12</p></div></a></li>
+</ul>
+</div>
+<script src="latest.js"></script> 
+<script src="transit.js"></script> 
+<script>
+
+(function() {
+
+  $(function() {
+    var columns, current, easing, grid, hideItem, showItem, time,
+      _this = this;
+    grid = $(".grid .item");
+    current = {
+      index: -1,
+      column: 0,
+      line: 0
+    };
+    columns = 4;
+	console.log(columns);
+    easing = "cubic-bezier(0.165, 0.840, 0.440, 1.000)";
+    time = 400;
+    grid.on("mouseenter", "a", function(e) {
+      var column, el, image, index, info, item, line;
+      el = $(e.currentTarget);
+      info = el.find(".info");
+      image = el.find("img");
+      index = el.parent().index() - 1;
+	  console.log(index);
+      column = index % columns;
+      line = Math.floor(index / columns);
+      console.log(index, column, line);
+      item = {
+        el: el,
+        index: index,
+        column: column,
+        line: line,
+        info: info,
+        image: image
+      };
+      if (current.el && current.index === index) return;
+      if (line === current.line && column > current.column) {
+		  
+        showItem(item, "-100%", 0, "25%", 0);
+        hideItem(current, "100%", 0, "-25%", 0);
+      } else if (line === current.line && column < current.column) {
+        showItem(item, "100%", 0, "-25%", 0);
+        hideItem(current, "-100%", 0, "25%", 0);
+      } else if (line > current.line && column === current.column) {
+        showItem(item, 0, "-100%", 0, "25%");
+        hideItem(current, 0, "100%", 0, "-25%");
+      } else {
+        showItem(item, 0, "100%", 0, "-25%");
+        hideItem(current, 0, "-100%", 0, "25%");
+      }
+      return current = item;
+    });
+    showItem = function(item, infoX, infoY, imageX, imageY) {
+      item.info.stop().css({
+        x: infoX,
+        y: infoY,
+        display: "block"
+      }).transition({
+        x: 0,
+        y: 0,
+        duration: time,
+        easing: easing
+      });
+      return item.image.stop().transition({
+        x: imageX,
+        y: imageY,
+        opacity: .5,
+        duration: time,
+        easing: easing
+      });
+    };
+    return hideItem = function(item, infoX, infoY, imageX, imageY) {
+      if (!item.el) return;
+      item.info.stop().transition({
+        x: infoX,
+        y: infoY,
+        duration: time,
+        easing: easing
+      });
+      return item.image.stop().css({
+        x: imageX,
+        y: imageY,
+        opacity: .5
+      }).transition({
+        x: 0,
+        y: 0,
+        opacity: 1,
+        duration: time,
+        easing: easing
+      });
+    };
+  });
+
+}).call(this);
+  </script> 
+</body>
+</html>
