@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="http://static.paipaiimg.com/js/jquery-1.8.3.min.js?t=20130307" type="text/javascript" language="javascript"></script>
+<style>
+body{margin:0;padding:0;}
+body{background:#000 url(bg.png) no-repeat center 0;}
+canvas{pointer-events:none;position:fixed;left:0;top:0;}
+.qm_wrap{width:1225px;margin:24px auto 0;position:relative;height:100px;overflow:hidden;}
+.qm_wrap .link_rain{position:absolute;left:0;top:0;width:300px;height:92px;cursor:pointer;z-index:10;}
+.qm_wrap .ele{position:absolute;background-image:url(ico_qm.png);}
+.qm_wrap .qm{left:280px;top:16px;width:17px;height:32px;opacity:0;animation:qm 2s linear .5s forwards;-moz-animation:qm 2s linear .5s forwards;-webkit-animation:qm 2s linear .5s forwards;background-position:-150px 0;}
+.qm_wrap .bird1{left:238px;top:7px;width:10px;height:10px;opacity:0;animation:bird1 5s ease-in-out 2s forwards;-moz-animation:bird1 5s ease-in-out 2s forwards;-webkit-animation:bird1 5s ease-in-out 2s forwards;background-position:-170px 0;}
+.qm_wrap .bird2{left:244px;top:6px;width:10px;height:9px;opacity:0;animation:bird2 1s ease-in-out 7s forwards;-moz-animation:bird2 1s ease-in-out 7s forwards;-webkit-animation:bird2 1s ease-in-out 7s forwards;background-position:-185px 0;}
+.qm_wrap .willow1{left:169px;top:0;width:60px;height:78px;transform-origin:center 0;-moz-transform-origin:center 0;-webkit-transform-origin:center 0;animation:willow1 5s ease 2s infinite;-moz-animation:willow1 5s ease 2s infinite;-webkit-animation:willow1 5s ease 2s infinite;background-position:0 0;}
+.qm_wrap .willow2{left:162px;top:0;width:78px;height:74px;transform-origin:center 0;-moz-transform-origin:center 0;-webkit-transform-origin:center 0;animation:willow2 5s linear 2s infinite;-moz-animation:willow2 5s linear 2s infinite;-webkit-animation:willow2 5s linear 2s infinite;background-position:-65px 0;}
+.qm_wrap .bw1{left:163px;top:75px;width:17px;height:5px;opacity:0;animation:bw 2s linear 3s infinite;-moz-animation:bw 2s linear 3s infinite;-webkit-animation:bw 2s linear 3s infinite;background-position:-200px 0;}
+.qm_wrap .bw2{left:190px;top:80px;width:27px;height:6px;opacity:0;animation:bw 2s linear 2.5s infinite;-moz-animation:bw 2s linear 2.5s infinite;-webkit-animation:bw 2s linear 2.5s infinite;background-position:-220px 0;}
+.qm_wrap .bw3{left:207px;top:70px;width:13px;height:3px;opacity:0;animation:bw 2s linear 2s infinite;-moz-animation:bw 2s linear 2s infinite;-webkit-animation:bw 2s linear 2s infinite;background-position:-250px 0;}
+@keyframes qm {
+	0%{opacity:0;}
+	10%{opacity:0.6;}
+	20%{opacity:0.3;}
+	30%{opacity:0.6;}
+	40%{opacity:1;}
+	100%{opacity:1;}
+}
+@-moz-keyframes qm {
+	0%{opacity:0;}
+	10%{opacity:0.6;}
+	20%{opacity:0.3;}
+	30%{opacity:0.6;}
+	40%{opacity:1;}
+	100%{opacity:1;}
+}
+@-webkit-keyframes qm {
+	0%{opacity:0;}
+	10%{opacity:0.6;}
+	20%{opacity:0.3;}
+	30%{opacity:0.6;}
+	40%{opacity:1;}
+	100%{opacity:1;}
+}
+@keyframes bird1 {
+	0%{left:300px;top:25px;opacity:0;}
+	50%{left:269px;top:0;opacity:0.5;}
+	100%{left:238px;top:7px;opacity:1;}
+}
+@-moz-keyframes bird1 {
+	0%{left:300px;top:25px;opacity:0;}
+	50%{left:269px;top:0;opacity:0.5;}
+	100%{left:238px;top:7px;opacity:1;}
+}
+@-webkit-keyframes bird1 {
+	0%{left:300px;top:25px;opacity:0;}
+	50%{left:269px;top:0;opacity:0.5;}
+	100%{left:238px;top:7px;opacity:1;}
+}
+@keyframes bird2 {
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@-moz-keyframes bird2 {
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@-webkit-keyframes bird2 {
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@keyframes willow1 {
+	20%{transform:rotate(1deg);}
+	40%{transform:rotate(-1deg);}
+	60%{transform:rotate(1deg);}
+	80%{transform:rotate(-1deg);}
+	100%{transform:rotate(0deg);}
+}
+@-moz-keyframes willow1 {
+	20%{-moz-transform:rotate(1deg);}
+	40%{-moz-transform:rotate(-1deg);}
+	60%{-moz-transform:rotate(1deg);}
+	80%{-moz-transform:rotate(-1deg);}
+	100%{-moz-transform:rotate(0deg);}
+}
+@-webkit-keyframes willow1 {
+	20%{-webkit-transform:rotate(1deg);}
+	40%{-webkit-transform:rotate(-1deg);}
+	60%{-webkit-transform:rotate(1deg);}
+	80%{-webkit-transform:rotate(-1deg);}
+	100%{-webkit-transform:rotate(0deg);}
+}
+@keyframes willow2 {
+	20%{transform:rotate(-1deg);}
+	40%{transform:rotate(1deg);}
+	60%{transform:rotate(-1deg);}
+	80%{transform:rotate(1deg);}
+	100%{transform:rotate(0deg);}
+}
+@-moz-keyframes willow2 {
+	20%{-moz-transform:rotate(-1deg);}
+	40%{-moz-transform:rotate(1deg);}
+	60%{-moz-transform:rotate(-1deg);}
+	80%{-moz-transform:rotate(1deg);}
+	100%{-moz-transform:rotate(0deg);}
+}
+@-webkit-keyframes willow2 {
+	20%{-webkit-transform:rotate(-1deg);}
+	40%{-webkit-transform:rotate(1deg);}
+	60%{-webkit-transform:rotate(-1deg);}
+	80%{-webkit-transform:rotate(1deg);}
+	100%{-webkit-transform:rotate(0deg);}
+}
+@keyframes bw {
+	0% {opacity: 0.1;transform: scale(0.1);}
+	30% {opacity: 1;transform: scale(0.8);}
+	60% {opacity:0;transform: scale(1);}
+}
+@-moz-keyframes bw {
+	0% {opacity: 0.1;transform: scale(0.1);}
+	30% {opacity: 1;transform: scale(0.8);}
+	60% {opacity:0;transform: scale(1);}
+}
+@-webkit-keyframes bw {
+	0% {opacity: 0.1;transform: scale(0.1);}
+	30% {opacity: 1;transform: scale(0.8);}
+	60% {opacity:0;transform: scale(1);}
+}
+</style>
+</head>
+
+<body>
+<canvas id="canvas"></canvas>
+<div class="qm_wrap">
+	<a href="http://static.chong.qq.com/promote/chong/2013/index_50.shtml" class="link_rain" id="rain" target="_blank"></a>
+	<i class="ele qm"></i>
+    <i class="ele bird1"></i>
+    <i class="ele bird2"></i>
+	<i class="ele willow1"></i>
+    <i class="ele willow2"></i>
+	<i class="ele bw1"></i>
+	<i class="ele bw2"></i>
+    <i class="ele bw3"></i>
+</div>
+<script>
+var Rain = function() {
+	
+    var W=2000, H=2000, ctx, angle=-2, len=5, count=100;
+     var self = function(id) {
+        var canvas = $("#canvas")[0];
+        ctx = canvas.getContext('2d');
+        canvas.width=W;
+        canvas.height=H;
+        ctx.strokeStyle = 'rgba(255, 255, 255, 1)';
+        ctx.lineWidth = 0.8;
+        //ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+
+        self.prototype.run();
+//console.log(1);
+
+    }
+	
+    self.prototype = {
+		st:null,
+		on:false,
+        run : function() {
+             var _this = this;
+			if(!_this.on){	
+	            _this.st = setInterval(function() {
+	                _this.draw();
+	            },
+	            200);
+				_this.on = true;
+				setTimeout(function(){_this.stop();},4000);
+			}
+        },
+		stop: function(){
+             var _this = this;
+			clearInterval(_this.st);
+			_this.on = false;
+			_this.clear();
+		},
+        draw : function() {
+            this.clear(); //清除画布，以便重绘
+            this.lines(); //重绘小球
+        },
+        clear : function() {
+            ctx.clearRect(0, 0, W, H);
+        },
+        line : function(x, y, r) {
+               ctx.beginPath();
+            ctx.moveTo(x, y);
+            //console.log(y, len);
+            ctx.lineTo(x + angle, y + len);
+            ctx.stroke();
+        },
+        lines : function() {
+            for(var i=1; i<=count; i++) {
+                this.line(Math.random()*W, Math.random()*H, angle);
+            }
+            //ctx.strokeStyle = "#ffffff";
+            //ctx.stroke();
+        },//改变风向
+        changeWind : function($angle) {
+            angle = $angle;
+            //console.log("angle");
+        }
+
+    }
+    return self;
+	
+}();
+
+$(function(){
+	Rain();
+	$('#rain').mouseenter(function(){
+		Rain();
+	});
+});
+</script>
+</body>
+</html>
